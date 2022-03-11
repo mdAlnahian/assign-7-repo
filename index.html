@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Insta-Sohor</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- Latest compiled and minified CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+
+        <!-- google Montserrat  font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <style>
+            #extraSection{
+                width: 85%;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+                <a class="navbar-brand" href="#">Insta-Sohor</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                            <i class="fa-solid fa-house"></i>
+                        </li>
+
+                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                            <i class="fa-solid fa-heart text-danger"></i>
+                        </li>
+
+                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main container mx-auto p-3">
+            <div id="posts">
+            </div>
+            <div id="liked">
+                <h1>Liked posts</h1>
+            </div>
+
+            <div id="reported">
+                <h1>Reported posts</h1>
+            </div>
+        </main>
+
+        <section id="extraSection">
+            <h2>How does javascript work ?</h2>
+            <p>
+                Javascript is a single threaded lightweight scripting programming language.Its works on both browser and server side. <br>
+                Browser loads a web page then parses the html  and creates DOM from the contents.DOM highlighted live view of the web page to your JavaScript code.
+                Browser then grab everything linked to the HTML and CSS files. <br>
+                HTML and CSS are put together by the DOM to create the web page first. Then the browsers JavaScript engine(V8 engine) loads JavaScript files and inline code but does not run the code immediately.<br>
+                It waits for the HTML and CSS to finish loading.When its complete the JavaScript is executed in the order the code is written. This results in the DOM being updated by JavaScript code and rendered by the browser.
+            </p>
+            <h2>What does javascript event loop do ?</h2>
+            
+            <p> Javascript event loop is the secret behind JavaScripts asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. <br>
+            Call stack is responsible for keeping track of all the operations in line to be executed. <br>
+            Event queue is responsible for sending new functions to the stack for processing.<br>
+            When any async function is called it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own singlethreaded operation.
+            </p>
+            
+        </section>
+        <footer>
+        </footer>
+
+        <!-- add javascript  file  -->
+        <script src="./js/app.js"></script>
+    </body>
+</html>
